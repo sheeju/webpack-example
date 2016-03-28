@@ -1,0 +1,28 @@
+sheeju@exceleron:webpack-example$ ./node_modules/.bin/webpack --display-modules --display-chunks
+Hash: b5ac2c44fee18719ddbb
+Version: webpack 1.12.14
+Time: 1642ms
+      Asset     Size  Chunks             Chunk Names
+  bundle.js  4.11 kB       0  [emitted]  main
+1.bundle.js   300 kB       1  [emitted]  
+2.bundle.js   299 kB       2  [emitted]  
+chunk    {0} bundle.js (main) 520 bytes [rendered]
+    [0] ./src/index.js 520 bytes {0} [built]
+chunk    {1} 1.bundle.js 290 kB {0} [rendered]
+    [1] ./~/babel-loader!./src/Components/Button.js 2 kB {1} [built]
+    [2] ./~/jquery/dist/jquery.js 259 kB {1} {2} [built]
+    [3] ./src/Components/Button.html 72 bytes {1} [built]
+    [4] ./~/mustache/mustache.js 19.4 kB {1} {2} [built]
+    [5] ./src/Components/Button.scss 1.05 kB {1} [built]
+    [6] ./~/css-loader!./~/sass-loader!./src/Components/Button.scss 212 bytes {1} [built]
+    [7] ./~/css-loader/lib/css-base.js 1.51 kB {1} {2} [built]
+    [8] ./~/style-loader/addStyles.js 7.15 kB {1} {2} [built]
+chunk    {2} 2.bundle.js 290 kB {0} [rendered]
+    [2] ./~/jquery/dist/jquery.js 259 kB {1} {2} [built]
+    [4] ./~/mustache/mustache.js 19.4 kB {1} {2} [built]
+    [7] ./~/css-loader/lib/css-base.js 1.51 kB {1} {2} [built]
+    [8] ./~/style-loader/addStyles.js 7.15 kB {1} {2} [built]
+    [9] ./~/babel-loader!./src/Components/Header.js 1.57 kB {2} [built]
+   [10] ./src/Components/Header.html 64 bytes {2} [built]
+   [11] ./src/Components/Header.scss 1.05 kB {2} [built]
+   [12] ./~/css-loader!./~/sass-loader!./src/Components/Header.scss 192 bytes {2} [built]
