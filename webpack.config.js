@@ -13,6 +13,15 @@ module.exports = {
 				query: {
 					presets: ['es2015']
 				}
+			},
+			{
+				test:   /\.scss/,
+				loader: 'style!css!sass',
+				//OR - loaders: ['style', 'css', 'sass'],
+			},
+			{
+				test:   /\.html/,
+				loader: 'html',
 			}
 		],
 	}
