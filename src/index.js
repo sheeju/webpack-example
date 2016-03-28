@@ -1,8 +1,10 @@
-//import $ from 'jquery';
+if (document.querySelectorAll('a').length) {
+	require.ensure([], () => {
+		//const Button = require('./Components/Button');
+		const Button = require('babel!./Components/Button').default;
 
-//$('body').html('Hello');
+		const button = new Button('google.com');
 
-import Button from './Components/Button';
-
-const button = new Button('google.com');
-button.render('a');
+		button.render('a');
+	});
+}
