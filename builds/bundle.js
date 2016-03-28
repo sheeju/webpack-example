@@ -97,14 +97,22 @@
 
 	'use strict';
 
+	// If we have an anchor, render the Button component on it
 	if (document.querySelectorAll('a').length) {
 		__webpack_require__.e/* nsure */(1, function () {
-			//const Button = require('./Components/Button');
 			var Button = __webpack_require__(1).default;
-
 			var button = new Button('google.com');
 
 			button.render('a');
+		});
+	}
+
+	// If we have a title, render the Header component on it
+	if (document.querySelectorAll('h1').length) {
+		__webpack_require__.e/* nsure */(2, function () {
+			var Header = __webpack_require__(9).default;
+
+			new Header().render('h1');
 		});
 	}
 
