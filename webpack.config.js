@@ -1,4 +1,5 @@
 var webpack    = require('webpack');
+var CleanPlugin = require('clean-webpack-plugin');
 var production = process.env.NODE_ENV === 'production';
 
 var plugins = [
@@ -11,6 +12,10 @@ var plugins = [
 
 if (production) {
     plugins = plugins.concat([
+
+    	// Cleanup the builds/ folder before
+        // compiling our final assets
+        new CleanPlugin('builds'),
 
         // This plugin looks for similar chunks and files
         // and merges them for better caching by the user
@@ -54,9 +59,10 @@ module.exports = {
 	devtool: production ? false : 'eval',
 	entry:  './src',
 	output: {
-		path:     'builds',
-		filename: 'bundle.js',
-		publicPath: 'builds/',
+	    path:          'builds',
+	    filename:      production ? '[name]-[hash].js' : 'bundle.js',
+	    chunkFilename: '[name]-[chunkhash].js',
+	    publicPath:    'builds/',
 	},
 	plugins: plugins,
 	module: {
