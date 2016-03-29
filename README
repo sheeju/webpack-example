@@ -55,3 +55,41 @@ chunk    {2} 2.bundle.js 2.87 kB {0} [rendered]
    [10] ./src/Components/Header.html 64 bytes {2} [built]
    [11] ./src/Components/Header.scss 1.05 kB {2} [built]
    [12] ./~/css-loader!./~/sass-loader!./src/Components/Header.scss 192 bytes {2} [built]
+
+===============
+
+sheeju@exceleron:webpack-example$ webpack --display-modules --display-chunks
+Hash: 5fd025d92e4a46558475
+Version: webpack 1.12.14
+Time: 1651ms
+                    Asset       Size  Chunks             Chunk Names
+                bundle.js     318 kB       0  [emitted]  main
+1-f79ba5a140f8ff773a1f.js    3.05 kB       1  [emitted]  
+2-49515c2c91d87d843030.js    2.59 kB       2  [emitted]  
+               bundle.css  140 bytes       0  [emitted]  main
+chunk    {0} bundle.js, bundle.css (main) 279 kB [rendered]
+    [0] ./src/index.js 547 bytes {0} [built]
+    [1] ./src/styles.scss 41 bytes {0} [built]
+    [3] ./~/jquery/dist/jquery.js 259 kB {0} [built]
+    [5] ./~/mustache/mustache.js 19.4 kB {0} [built]
+chunk    {1} 1-f79ba5a140f8ff773a1f.js 2.12 kB {0} [rendered]
+    [2] ./~/babel-loader!./src/Components/Button.js 2 kB {1} [built]
+    [4] ./src/Components/Button.html 72 bytes {1} [built]
+    [6] ./src/Components/Button.scss 41 bytes {1} [built]
+chunk    {2} 2-49515c2c91d87d843030.js 1.67 kB {0} [rendered]
+    [7] ./~/babel-loader!./src/Components/Header.js 1.57 kB {2} [built]
+    [8] ./src/Components/Header.html 64 bytes {2} [built]
+    [9] ./src/Components/Header.scss 41 bytes {2} [built]
+Child extract-text-webpack-plugin:
+    chunk    {0} extract-text-webpack-plugin-output-filename 1.72 kB [rendered]
+        [0] ./~/css-loader!./~/sass-loader!./src/styles.scss 218 bytes {0} [built]
+        [1] ./~/css-loader/lib/css-base.js 1.51 kB {0} [built]
+Child extract-text-webpack-plugin:
+    chunk    {0} extract-text-webpack-plugin-output-filename 1.7 kB [rendered]
+        [0] ./~/css-loader!./~/sass-loader!./src/Components/Header.scss 192 bytes {0} [built]
+        [1] ./~/css-loader/lib/css-base.js 1.51 kB {0} [built]
+Child extract-text-webpack-plugin:
+    chunk    {0} extract-text-webpack-plugin-output-filename 1.72 kB [rendered]
+        [0] ./~/css-loader!./~/sass-loader!./src/Components/Button.scss 212 bytes {0} [built]
+        [1] ./~/css-loader/lib/css-base.js 1.51 kB {0} [built]
+

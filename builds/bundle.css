@@ -1,0 +1,8 @@
+body {
+  font-family: sans-serif;
+  background: #fefefe; }
+.button {
+  background: tomato;
+  color: white; }
+.header {
+  font-size: 3rem; }
